@@ -3,7 +3,7 @@
 # Makefile for building and managing the Claude Code Docker container
 
 # Variables
-IMAGE_NAME := claude-code
+IMAGE_NAME := claude
 CONTAINER_NAME := claude-code-instance
 NPM_CACHE_VOLUME := claude-code-npm-cache
 
@@ -15,7 +15,7 @@ all: build ## Build the Docker image (default target)
 .PHONY: build
 build: ## Build the Docker image without using cache (ensures fresh npm packages)
 	@echo "Building Docker image $(IMAGE_NAME) without cache..."
-	docker build --no-cache --pull -t $(IMAGE_NAME) .
+	docker build -t $(IMAGE_NAME) .
 	@echo "Build complete."
 
 # Quick build (with cache for faster rebuilds)
