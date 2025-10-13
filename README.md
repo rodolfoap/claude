@@ -7,11 +7,11 @@ An unofficial containerized version of the Claude Code CLI, allowing you to inte
 ## Usage
 ```
 claude(){ docker run --rm -it \
-                -v "$(pwd):/app" \
-                -v ~/.npm-cache:/npm-cache \
-                -e CONTAINER_USER_ID=$(id -u) \
-                -e CONTAINER_GROUP_ID=$(id -g) \
-                claude
+	-v "$(pwd):/app" \
+	-v ~/.npm-cache:/npm-cache \
+	-e CONTAINER_USER_ID=$(id -u) \
+	-e CONTAINER_GROUP_ID=$(id -g) \
+	claude
 }
 ```
 
