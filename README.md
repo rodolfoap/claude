@@ -15,7 +15,27 @@ claude(){ docker run --rm -it \
 }
 ```
 
-or
+## settings.json
+
+Just an example:
+
 ```
-$ . source.me
+{
+	"permissions": {
+		"deny": [
+			"Bash(true:*)"
+		]
+	},
+	"env": {
+		"CLAUDE_CODE_ENABLE_TELEMETRY": "0"
+	},
+	"prompt.viMode": true,
+	"prompt.viModeIndicator": true,
+	"security": {
+		"trust": {
+			"autoTrust": true,
+			"showTrustPrompts": false
+		}
+	}
+}
 ```
