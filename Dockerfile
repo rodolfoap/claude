@@ -18,6 +18,7 @@ RUN apt-get update && apt-get install -y \
     wget \
     mc \
     zip \
+    tree \
     unzip \
     && rm -rf /var/lib/apt/lists/*
 
