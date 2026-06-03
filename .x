@@ -3,8 +3,8 @@ e)	vi -p .x
 	;;
 b)	docker build -t claude .
 	;;
-bn)	docker build --no-cache -t claude .
+s)	docker run --rm -it --name claude -v "$(pwd):/app" -v ~/.claude/:/home/claude/.claude/ -v ~/.claude.json:/home/claude/.claude.json --entrypoint=/bin/bash claude
 	;;
-"")	true
+"")	docker run --rm -it --name claude -v "$(pwd):/app" -v ~/.claude/:/home/claude/.claude/ -v ~/.claude.json:/home/claude/.claude.json claude
 	;;
 esac
